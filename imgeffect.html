@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Effect</title>
+        <style>
+            .image{
+                width: 50px;
+                height: 80px;
+                position: relative;
+                display: inline-block;
+                margin: 50px;
+            }
+            .image .img-top{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .image:hover .img-top{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image">
+            <img src="https://www.pngarts.com/files/3/Avatar-PNG-High-Quality-Image.png">
+            <img src="https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png" class="img-top">
+        </div>
+    </body>
+</html>

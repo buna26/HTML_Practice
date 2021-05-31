@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url("https://miro.medium.com/max/3840/1*MGv5b9bNEIRcYPVxQ50m0Q.jpeg");
+                background-repeat: no-repeat;                
+                background-position: center;
+                height: 700px;
+                background-size: cover;
+            }
+            p{
+                font-size: 18px;
+            }
+            input{
+                font-size: 18px;
+            }
+            input, select {
+                font-size: 15px;
+            }
+        </style>
+        <p>Enter 1st Number:</p><input type="text" id="num1">
+        <p>Enter 2nd Number:</p><input type="text" id="num2"><br/>
+        <select id="operator">
+            <option value="Select..">Select..</option>
+            <option value="+">ADD</option>
+            <option value="-">SUBTRACT</option>
+            <option value="*">MULTIPLY</option>
+            <option value="/">DIVIDE</option>
+        </select><br/>
+        <input type="button" onClick="calc();" value="=">
+        <input type="text" id="answer"><br/>
+    </head>
+    <body>
+        <script>
+            function calc(){
+                var a = Number(document.getElementById("num1").value);
+                var b = Number(document.getElementById("num2").value);
+                var op = document.getElementById("operator").value;
+
+                switch (op) {
+                    case '+':
+                        var ans = a+b;
+                        document.getElementById("answer").value = ans;
+                        break;
+
+                    case '-':
+                        var ans = a-b;
+                        document.getElementById("answer").value = ans;
+                        break;
+
+                    case '*':
+                        var ans = a*b;
+                        document.getElementById("answer").value = ans;
+                        break;
+
+                    case '/':
+                        var ans = a/b;
+                        document.getElementById("answer").value = ans;
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
